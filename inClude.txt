@@ -1,0 +1,21 @@
+- Trong php,lệnh  include dùng để chèn 1 file vào trong 1 file khác.
+=>> tái sử code và tạo ra các module hoặc thư viện riêng để dễ dàng quản lý code
+    cú pháp:include 'địa chỉ của file';
+    -require: 1 biến thể khác của include 
+    Cả 2 lệnh đều có chức năng tương tự (chèn file này vào file kia)
+    nhưng sự khác biệt chính là nếu file được chèn không tồn tại,thì lệnh
+    "include" sẽ cảnh báo "require" sẽ hiểu thị lỗi nghiêm trọng fatal error
+     và dừng toàn bộ câu lệnh ở dưới
+     - include_once và include là 2 từ khoá dùng để nhập 1 file vào trong1
+     file khác. Tuy cùng chức năng nhưng có điểm khác nhau:
+     +include:
+        .từ khoá include
+        .Nếu file được nhập trước đó thì nó rồi và tiếp tục nhập thì nó vẫn
+        thực thi lại mỗi khi gặp lệnh include
+
+
+    +include_once:
+        .Từ khoá:include_once
+        .Nếu file được nhập trước đó rồi thì nó sẽ không nhận lại các câu lệnh
+         khai báo lại ở sau =>> nó đảm bảo rằng các định nghĩa, hà, biến trong fuke chỉ được định
+         nghĩa duy nhất 1 lần, tránh việc xảy ra lỗi khi trùng lặp
